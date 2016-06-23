@@ -15,7 +15,7 @@ class CalendarHeaderView: UIView {
         let lbl = UILabel()
         lbl.textAlignment = NSTextAlignment.Center
         lbl.font = UIFont(name: "Helvetica", size: 20.0)
-        lbl.textColor = UIColor.grayColor()
+        //lbl.textColor = UIColor.whiteColor()
         
         self.addSubview(lbl)
         
@@ -36,13 +36,12 @@ class CalendarHeaderView: UIView {
             
             weekdayLabel.font = UIFont(name: "Helvetica", size: 14.0)
             
-            weekdayLabel.text = day.substringToIndex(2).uppercaseString
-            weekdayLabel.textColor = UIColor.grayColor()
+            weekdayLabel.text = day.substringToIndex(3).uppercaseString
+            weekdayLabel.textColor = UIColor.whiteColor()
             weekdayLabel.textAlignment = NSTextAlignment.Center
             
             v.addSubview(weekdayLabel)
         }
-        
         self.addSubview(v)
         
         return v
@@ -74,6 +73,7 @@ class CalendarHeaderView: UIView {
         
         for lbl in self.dayLabelContainerView.subviews {
             
+            lbl.backgroundColor = UIColor(red: 46.0/255.0, green: 184.0/255.0, blue: 195.0/255.0, alpha: 1.0)
             lbl.frame = labelFrame
             labelFrame.origin.x += labelFrame.size.width
         }
